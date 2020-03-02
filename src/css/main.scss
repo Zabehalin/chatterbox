@@ -1,0 +1,23 @@
+/* Custom bootstrap */
+@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.css';
+
+/* Font awesome */
+@import '../../node_modules/font-awesome/css/font-awesome.min.css';
+
+/* Custom */
+@import 'partials/buttons.scss';
+@import 'partials/colors.scss';
+@import 'partials/fonts.scss';
+
+/* Mixins */ 
+@import 'mixins/button.scss';
+@import 'mixins/font.scss';
+
+/* Settings */
+
+
+/* Views */
+
+@import 'views/header';
+@import 'views/main_home';
+@import 'views/footer';
