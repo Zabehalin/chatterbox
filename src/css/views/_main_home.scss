@@ -1,0 +1,9 @@
+a{
+    @include font(30px, Arial, yellow);
+    @include btn(red, 1px silver solid, inline-block, uppercase, 10px, 20px);
+    width: 100px;
+    height: 50px;
+    text-decoration: none;
+
+
+}
