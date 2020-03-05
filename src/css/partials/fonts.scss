@@ -1,8 +1,7 @@
 @font-face {
     font-family: "fontawesomeRegular";
     src: url("../fonts/font-awesome/fontawesome-webfont.eot");
-    src: url("../fonts/font-awesome/fontawesome-webfont.eot")
-        format("embedded-opentype"),
+    src: url("../fonts/font-awesome/fontawesome-webfont.eot") format("embedded-opentype"),
       url("../fonts/font-awesome/fontawesome-webfont.woff2") format("woff2"),
       url("../fonts/font-awesome/fontawesome-webfont.woff") format("woff"),
       url("../fonts/font-awesome/fontawesome-webfont.ttf") format("truetype"),
@@ -50,7 +49,7 @@
   @font-face {
     font-family: "sourceSansProBoldItalic";
     src: url("../../fonts/SourceSansPro-BoldItalic/sourcesanspro-bolditalic-webfont.eot");
-    src: url("../../fonts/SourceSansPro-BoldItalic/sourcesanspro-bolditalic-webfont.eot") format("truetype"),
+    src: url("../../fonts/SourceSansPro-BoldItalic/sourcesanspro-bolditalic-webfont.eot") format("embedded-opentype"),
       url("../../fonts/SourceSansPro-BoldItalic/sourcesanspro-bolditalic-webfont.woff2") format("woff2"),
       url("../../fonts/SourceSansPro-BoldItalic/sourcesanspro-bolditalic-webfont.woff") format("woff"),
       url("../../fonts/SourceSansPro-BoldItalic/sourcesanspro-bolditalic-webfont.ttf") format("truetype"),
@@ -88,7 +87,7 @@
   src: url("../../fonts/SourceSansPro-Italic/sourcesanspro-italic-webfont.eot");
   src: url("../../fonts/SourceSansPro-Italic/sourcesanspro-italic-webfont.eot") format("embedded-opentype"),
     url("../../fonts/SourceSansPro-Italic/sourcesanspro-italic-webfont.woff2") format("woff2"),
-    url("../../fonts/SourceSansPro-Italic/sourcesanspro-italic-webfont.woff") format("woff2"),
+    url("../../fonts/SourceSansPro-Italic/sourcesanspro-italic-webfont.woff") format("woff"),
     url("../../fonts/SourceSansPro-Italic/sourcesanspro-italic-webfont.ttf") format("truetype"),
     url("../../fonts/SourceSansPro-Italic/sourcesanspro-italic-webfont.svg") format("svg");
   font-weight: normal;
