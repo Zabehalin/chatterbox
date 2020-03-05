@@ -1,0 +1,8 @@
+@mixin btn($background, $border,$display, $text-transform, $padding, $line-height) {
+    background:$background;
+    border:$border;
+    display:$display;
+    text-transform:$text-transform;
+    padding:$padding;
+    line-height:$line-height;
+}
