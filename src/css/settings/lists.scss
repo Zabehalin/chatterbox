@@ -1,0 +1,6 @@
+ul{
+    li{
+      @include font(14px, $font-regular, $font-color-primary-1);
+      line-height: 25px;
+    }
+}
