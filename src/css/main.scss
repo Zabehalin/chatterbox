@@ -14,10 +14,9 @@
 @import 'mixins/font.scss';
 
 /* Settings */
-
+@import 'settings/input.scss';
 
 /* Views */
-
 @import 'views/header';
 @import 'views/main_home';
 @import 'views/footer';
