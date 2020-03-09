@@ -1,0 +1,27 @@
+h1{
+    @include font(20px, $font-semiBold, $font-color-primary-1)
+}
+
+h2{
+    @include font(18px, $font-semiBold, $font-color-primary-1)
+}
+
+h3{
+    @include font(16px, $font-semiBold, $font-color-primary-1)
+}
+
+h4{
+    @include font(14px, $font-semiBold, $font-color-primary-1)
+}
+
+h5{
+    @include font(12px, $font-semiBold, $font-color-primary-1)
+}
+
+h6{
+    @include font(10px, $font-semiBold, $font-color-primary-1)
+}
+
+p{
+    @include font(14px, $font-regular, $font-color-primary-1)
+}
