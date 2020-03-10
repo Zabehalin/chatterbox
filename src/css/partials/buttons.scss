@@ -1,11 +1,11 @@
-@import"mixins/font.scss";
+@import"mixins/font";
 @import"colors.scss";
 @import"mixins/button";
 @import"fonts.scss";
 
 .btn-success{
     @include btn(linear-gradient(to top, $bg-color-btn-success-1 0%, $bg-color-btn-success-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, sourceSansProSemiBold , $font-color-1);
+    @include font(14px, $font-semiBold , $font-color-primary-1);
     
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@
 
 .btn-blue{
     @include btn(linear-gradient(to top, $bg-color-btn-blue-1 0%, $bg-color-btn-blue-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, sourceSansProSemiBold , $font-color-1);
+    @include font(14px, $font-semiBold, $font-color-primary-1);
     
     justify-content: center;
     align-items: center;
@@ -47,7 +47,7 @@
 
 .btn-gray{
     @include btn( $bg-color-btn-gray, none, flex, none, 0px, 30px );
-    @include font(14px, sourceSansProSemiBold , $font-color-1);
+    @include font(14px, $font-semiBold, $font-color-primary-1);
     
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@
 
 .btn-violet{
     @include btn(linear-gradient(to top, $bg-color-btn-violet-1 0%, $bg-color-btn-violet-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, sourceSansProSemiBold , $font-color-1);
+    @include font(14px, $font-semiBold, $font-color-primary-1);
     
     justify-content: center;
     align-items: center;
@@ -93,7 +93,7 @@
 
 .btn-error{
     @include btn(linear-gradient(to top, $bg-color-btn-error-1 0%, $bg-color-btn-error-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, sourceSansProSemiBold , $font-color-1);
+    @include font(14px, $font-semiBold, $font-color-primary-1);
     
     justify-content: center;
     align-items: center;
@@ -115,7 +115,7 @@
 
 .btn-warning{
     @include btn(linear-gradient(to top, $bg-color-btn-warning-1 0%, $bg-color-btn-warning-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, sourceSansProSemiBold , $font-color-1);
+    @include font(14px, $font-semiBold, $font-color-primary-1);
     
     justify-content: center;
     align-items: center;
