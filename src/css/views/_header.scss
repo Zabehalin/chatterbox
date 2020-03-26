@@ -5,7 +5,7 @@ body {
 }
 
 header {
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   .header-main {
     background-color: $bg-color-primary-1;
     width: 100%;
@@ -154,6 +154,7 @@ header {
   }
 
   @media screen and (max-width: 992px) {
+    margin-bottom: 70px;
     .header-main {
       .logo {
         left: 50px;
@@ -178,6 +179,7 @@ header {
     }
   }
   @media screen and (max-width: 768px) {
+    margin-bottom: 50px;
     .header-main {
       .logo {
         bottom: -20px;
@@ -195,6 +197,7 @@ header {
   }
 
   @media screen and (max-width: 576px) {
+    margin-bottom: 20px;
     .header-main {
       .logo {
         top: 0;
