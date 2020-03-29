@@ -30,6 +30,7 @@ footer{
        
      a{
          padding: 0 10px;
+         color: $font-color-primary-1;
          &:visited{
             color: $font-color-primary-1;
          }
@@ -46,7 +47,6 @@ footer{
 
     
     @media screen and(max-width:768px){
-       
         font-size: 14px;
     }
      }

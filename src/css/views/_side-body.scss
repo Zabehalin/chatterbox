@@ -1,9 +1,4 @@
 
-body{
-  min-width: 320px;
-  max-width: 1920px;
-}
-
 .scroll{
  overflow: scroll;
     overflow-x: hidden;
@@ -35,7 +30,7 @@ body{
     background: linear-gradient(to bottom,  $bg-color-primary-1 , transparent 90%);    
     border-radius: 5px;    
     //padding: 0;  
-    @media screen and (max-width : 576px){
+    @media screen and (max-width : 768px){
       height: 80vh;      
     } 
   }  
