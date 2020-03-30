@@ -24,7 +24,7 @@
     }
 }
 
-.btn-blue{
+.btn-type-one{
     @include btn(linear-gradient(to top, $bg-color-btn-blue-1 0%, $bg-color-btn-blue-2 100%), none, flex, none, 0px, 30px );
     @include font(14px, $font-semiBold, $font-color-primary-1);
     
@@ -45,7 +45,7 @@
     }
 }
 
-.btn-gray{
+.btn-type-two{
     @include btn( $bg-color-btn-gray, none, flex, none, 0px, 30px );
     @include font(14px, $font-semiBold, $font-color-primary-1);
     
@@ -69,7 +69,7 @@
     }
 }
 
-.btn-violet{
+.btn-type-three{
     @include btn(linear-gradient(to top, $bg-color-btn-violet-1 0%, $bg-color-btn-violet-2 100%), none, flex, none, 0px, 30px );
     @include font(14px, $font-semiBold, $font-color-primary-1);
     

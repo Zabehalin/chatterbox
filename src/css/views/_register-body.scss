@@ -1,0 +1,42 @@
+.register-form{
+    display: flex;
+    justify-content: center;
+
+    .form-group{
+        margin-top: 100px;
+
+        .input-container{
+            display: flex;
+            margin-bottom: 15px;
+        
+            .icon{
+                padding: 10px;
+                background: $bg-color-primary-1;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                color: $font-color-primary-3;
+                text-align: center;
+                min-width: 40px;
+                z-index: 2;
+            }
+        
+            .inp{
+                width: 250px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+
+        .btn{
+            margin-top: 30px;
+            width: 290px;
+        }
+    }
+}
+
+
+
+
+
+
+
