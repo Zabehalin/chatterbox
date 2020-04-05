@@ -1,0 +1,22 @@
+.login-links-block
+{
+    margin-top: 10px;
+    .login-links
+    {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        a
+        {
+          text-decoration: none;
+          color:$font-color-primary-1;
+          &:hover{
+            color: rgba($color: $font-color-primary-5, $alpha: 0.6);
+          }
+          &:active{
+            color: rgba($color: $font-color-primary-5, $alpha: 1);
+          }
+
+        }
+    }
+}

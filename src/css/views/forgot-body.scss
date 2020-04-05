@@ -1,0 +1,35 @@
+.forgot-form{
+    display:flex;
+    justify-content: center;
+
+    .form-group-forgot{
+        margin-top: 200px;
+
+        .input-container-forgot{
+            display: flex;
+            margin-bottom: 15px;
+
+            .icon-forgot{
+                padding: 12px;                
+                background: $bg-color-primary-1;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                color: $font-color-primary-3;
+                text-align: center;
+                min-width: 40px;
+                z-index: 2;
+            }
+    
+            .input-forgot{
+                width: 250px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;                
+            }
+        }      
+
+        .btn-forgot{
+            margin-top: 30px;
+            width: 290px;
+        }
+    }   
+}

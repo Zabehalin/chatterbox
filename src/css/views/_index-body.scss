@@ -1,346 +1,346 @@
-.index-body {
-  * {
-    box-sizing: border-box;
-  }
-  // start search form
-
-  .search-block {
-    .search-form {
-      position: relative;
-      width: 100%;
-      height: 36px;
-      margin: 0 auto;
-      border-radius: 4px;
-      border: 1px solid $border-color-input-1;
-      background-color: $bg-color-input-1;
-      background-image: linear-gradient(
-        to left,
-        $bg-color-input-6 0%,
-        $bg-color-input-7 100%
-      );
+.index-body{
+    @media screen and (max-width: 768px){
+        display: none;
     }
-    .search-form input,
-    button {
-      border: none;
-      outline: none;
-      background: transparent;
-      .fa {
-        color: $font-color-primary-7;
-      }
-    }
-    .search-form input {
-      width: 100%;
-      height: 34px;
-      padding-left: 15px;
-      caret-color: $font-color-primary-7;
-      cursor: text;
-      color: $font-color-primary-7;
-    }
-    .search-form button {
-      height: 100%;
-      width: 40px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      cursor: pointer;
-    }
-  }
-  // end  search form
+    .search-input{
+        .search-block {
+            .search-form {
+              position: relative;
+              width: 100%;
+              height: 36px;
 
-  // start addressee-block
-  .addressee-block {
-    margin-top: 19px;
-    width: 100%;
-    height: auto;
-    border-radius: 4px 4px 0px 0px;
-    border: 1px solid $border-color-input-1;
-    background-color: $bg-color-primary-1;
-
-    // -webkit-touch-callout: none; /* iOS Safari */
-    // -webkit-user-select: none; /* Chrome/Safari/Opera */
-    // -khtml-user-select: none; /* Konqueror */
-    // -moz-user-select: none; /* Firefox */
-    // -ms-user-select: none; /* Internet Explorer/Edge */
-    // user-select: none;
-
-    .addressee-content  /* .addressee-data */ {
-      position: relative;
-      display: flex;
-      align-items: center;
-      margin: 8px 12px;
-
-      // img {
-      //   width: 35px;
-      //   //bottom: 12px;
-      //   //margin: 10px 0px 0px 20px;
-      //   // height: 30px;
-      //   ////position: absolute;
-      // }
-      p {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding-left: 8px;
-        padding-right: 20px;
-        line-height: 40px;
-      }
-    }
-
-    .online-checkbox {
-      padding-left: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .online-checkbox-back {
-        background-color: green;
-        // position: absolute;
-        width: 14px;
-        height: 14px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-
-        .online-checkbox-front {
-          background-color: white;
-          width: 6px;
-          height: 6px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-        }
-
-        p {
-          display: flex;
-          justify-content: end;
-          align-items: center;
-          margin: 0;
-          // padding-left: 0px;
-          line-height: 40px;
-          position: relative;
-        }
-      }
-    }
-
-    // start. block deletion of messages
-    .delete-messages-block {
-      position: relative;
-      //left: 480px;
-
-      .delete-messages-button {
-        position: relative;
-        width: 30px;
-        height: 29px;
-        border-radius: 0px 4px 4px 0px;
-        border: 1px solid $border-color-input-1;
-        border-left: none;
-        background-color: $bg-color-input-1;
-        float: right;
-
-        .btn-delete {
-          width: 29px;
-          height: 27px;
-
-          i {
-            position: relative;
-            color: $font-color-primary-7;
-
-            &:hover {
-              color: $font-color-primary-1;
-              transition: all 0.4s ease 0s;
+              border-radius: 4px;
+              border: 1px solid $border-color-input-1;
+              background-color: $bg-color-input-1;
+              background-image: linear-gradient(
+                to left,
+                $bg-color-input-6 0%,
+                $bg-color-input-7 100%
+              );
             }
-            &:active {
-              color: $font-color-primary-2;
-              transition: all 0.4s ease 0s;
+            .search-form input,
+            button {
+              border: none;
+              outline: none;
+              background: transparent;
+              .fa {
+                color: $font-color-primary-7;
+              }
+            }
+            .search-form input {
+              width: 100%;
+              height: 34px;
+              padding-left: 15px;
+              caret-color: $font-color-primary-7;
+              cursor: text;
+              color: $font-color-primary-7;
+            }
+            .search-form button {
+              height: 100%;
+              width: 40px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              cursor: pointer;
             }
           }
-        }
-      }
-
-      .check-all-messages {
-        position: relative;
-        width: 30px;
-        height: 29px;
-        border-radius: 4px 0px 0px 4px;
-        border: 1px solid $border-color-input-1;
-        background-color: $bg-color-input-1;
-        float: right;
-
-        .container-check-all {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          top: 4px;
-          cursor: pointer;
-
-          input {
-            cursor: pointer;
-            position: relative;
-            display: block;
-          }
-        }
-      }
     }
-    // end. block deletion of messages
-  }
-  // end addressee-block
 
-  // start. messages block
-  .messages-block {
-    position: relative;
-    width: 100%;
-    height: 42vh;
-    // border-radius: 0px 0px 4px 4px;
-    border: 1px solid $border-color-input-1;
-    background-color: $bg-color-primary-1;
-    opacity: 1;
+    .content-adress-block{
+        .addressee-block {
+            margin-top: 19px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px 4px 0px 0px;
+            border: 1px solid $border-color-input-1;
+            background-color: $bg-color-primary-1;
+        
+            .addressee-content  /* .addressee-data */ {
+              position: relative;
+              display: flex;
+              align-items: center;
+              margin: 8px 12px;
+        
+              p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                padding-left: 8px;
+                padding-right: 20px;
+                line-height: 40px;
+                white-space: pre;
+              }
+            }
+        
+            .online-checkbox {
+              padding-left: 20px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+        
+              .online-checkbox-back {
+                background-color: $bg-color-btn-success-1;
+                width: 14px;
+                height: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+        
+                .online-checkbox-front {
+                  background-color: $font-color-primary-1;
+                  width: 6px;
+                  height: 6px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 50%;
+                }
+        
+                p {
+                  display: flex;
+                  justify-content: end;
+                  align-items: center;
+                  margin: 0;
+                  line-height: 40px;
+                  position: relative;
 
-    .content-messages {
-      padding: 15px;
-      .input-message {
-        position: relative;
-        width: 20%;
-        height: 32px;
-        border-radius: 4px;
-        border: 1px solid $border-color-input-2;
-        background-color: $bg-color-primary-3;
-        margin: 10px;
-        //float: left;
-
-        p {
-          font-family: $font-semiBold;
-          font-size: 14px;
-          position: relative;
-          margin: 0px;
-          padding: 4px;
-          padding-left: 10px;
-
-          .time-right {
-            position: relative;
-            font-size: 11px;
-            opacity: 0.83;
-            float: right;
-            top: 4px;
-            font-family: $font-extraLight;
+                }
+              }
+              @media screen and(max-width: 1200px){
+                  
+              }
+            }
+        
+            // start. block deletion of messages
+            .delete-messages-block {
+                position: absolute;
+                right: 10px;
+        
+              .delete-messages-button {
+                position: relative;
+                float: right;
+                .btn-delete {
+                  width: 29px;
+                  height: 27px;
+                  background-color: $bg-color-primary-1;
+                  border: 1px solid $border-color-input-1;
+                  border-left: none;
+                  width: 30px;
+                  height: 29px;
+                  border-radius: 0px 4px 4px 0px;
+                  outline: none;
+                  i {
+                    
+                    color: $font-color-primary-7;
+        
+                    &:hover {
+                      color: $font-color-primary-1;
+                      transition: all 0.4s ease 0s;
+                    }
+                    &:active {
+                      color: $font-color-primary-2;
+                      transition: all 0.4s ease 0s;
+                    }
+                  }
+                  &:hover{
+                    i {
+                        color: $font-color-primary-1;
+                        transition: all 0.4s ease 0s;
+                        
+                      }
+                  }
+                  &:active {
+                      i{
+                        color: $font-color-primary-2;
+                        transition: all 0.4s ease 0s;
+                      }
+                  }
+                }
+              }
+        
+              .check-all-messages {
+                position: relative;
+                width: 30px;
+                height: 29px;
+                border-radius: 4px 0px 0px 4px;
+                border: 1px solid $border-color-input-1;
+                background-color: $bg-color-input-1;
+                float: right;
+        
+                .container-check-all {
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  top: 4px;
+                  cursor: pointer;
+        
+                  input {
+                    cursor: pointer;
+                    position: relative;
+                    display: block;
+                  }
+                }
+              }
+            }
+            // end. block deletion of messages
           }
-        }
-      }
-
-      .output-message {
-        position: relative;
-        width: 20%;
-        height: 32px;
-        border-radius: 4px;
-        border: 1px solid $border-color-input-2;
-        background-color: $bg-color-primary-4;
-        margin: 10px;
-        float: right;
-
-        p {
-          //   display: flex;
-          //   align-items: center;
-          font-family: $font-semiBold;
-          font-size: 14px;
-          position: relative;
-          margin: 0px;
-          padding: 4px;
-          padding-left: 10px;
-
-          .time-right {
-            position: relative;
-            font-size: 11px;
-            opacity: 0.83;
-            float: right;
-            top: 4px;
-            font-family: $font-extraLight;
-          }
-        }
-      }
     }
-  }
-  // end. messages block
+    .content-message-block{
+        .messages-block {
+            overflow: hidden;
+            position: relative;
+            
+            height: 45vh;
+            border: 1px solid $border-color-input-1;
+            background-color: $bg-color-primary-1;
+            opacity: 1;
+        
+            .content-messages {
+              padding: 15px;
+              .input-message {
+                display: flex;
+                background-color: transparent;
+                margin: 10px;
 
-  // start input-messages-block
-  .input-messages {
-    width: 100%;
-    height: 60px;
-    border-radius: 0px 0px 4px 4px;
-    border: 1px solid $border-color-input-1;
-    background-color: $bg-color-primary-1;
-    opacity: 1;
+                .msg{
+                    
 
-    .input-messages-content {
-      margin: 10px;
-      height: 100%;
+                    .text {
+                        border-radius: 4px;
+                        border: 1px solid $border-color-input-2;
+                        display: flex;
+                        align-items: center;
+                        font-family: $font-semiBold;
+                        font-size: 14px;
+                        padding: 5px 20px;
+                        margin: 0px;
+                    }
 
-      .microphone {
-        top: 10px;
-        float: left;
-        display: flex;
-        position: relative;
-        border: none;
-        background: none;
-        width: 10px;
-        padding: 0px;
-        margin-right: 10px;
+                    .time{
+                        margin: 0;
+                        font-size: 11px;
+                        color: $font-color-primary-3;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+              }
+        
+              .output-message {
+                display: flex;
+                justify-content: flex-end;
+                margin: 10px;
+                .msg{
+                    
 
-        i {
-          position: relative;
-          color: $font-color-primary-7;
+                    .text {
+                        border-radius: 4px;
+                        background-color: $bg-color-primary-4;
+                        border: 1px solid $border-color-input-1;
+                        display: flex;
+                        align-items: center;
+                        font-family: $font-semiBold;
+                        font-size: 14px;
+                        padding: 5px 20px;
+                        margin: 0px;
+                    }
 
-          &:hover {
-            color: $font-color-primary-1;
-            transition: all 0.4s ease 0s;
+                    .time{
+                        margin: 0;
+                        font-size: 11px;
+                        color: $font-color-primary-3;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+              }
+            }
           }
-          &:active {
-            color: $font-color-primary-2;
-            transition: all 0.4s ease 0s;
-          }
-        }
-      }
-
-      .messages-form {
-        position: relative;
-        width: 90%;
-        height: 36px;
-        margin: 0 auto;
-        border-radius: 4px;
-        border: 1px solid $border-color-input-1;
-        background-color: $bg-color-input-1;
-        float: left;
-      }
-      .messages-form input,
-      button {
-        border: none;
-        outline: none;
-        background: transparent;
-        .fa {
-          color: $font-color-primary-7;
-        }
-      }
-      .messages-form input {
-        width: 100%;
-        height: 34px;
-        padding-left: 15px;
-        caret-color: $font-color-primary-7;
-        cursor: text;
-        color: $font-color-primary-7;
-      }
-      .messages-form button {
-        height: 100%;
-        width: 40px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        cursor: pointer;
-      }
-      .send-message {
-      }
     }
-  }
-  // end. input-messages-block
+
+    .content-input-form{
+        .input-messages {
+            display: flex;
+            height: 55px;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 0px 0px 4px 4px;
+            border: 1px solid $border-color-input-1;
+            background-color: $bg-color-primary-1;
+            opacity: 1;
+        
+            .input-content-microfone{
+                .microphone {
+                    display: flex;
+                    border: none;
+                    background: none;
+                    width: 10px;
+                    i {
+                      position: relative;
+                      color: $font-color-primary-7;
+            
+                      &:hover {
+                        color: $font-color-primary-1;
+                        transition: all 0.4s ease 0s;
+                      }
+                      &:active {
+                        color: $font-color-primary-2;
+                        transition: all 0.4s ease 0s;
+                      }
+                    }
+                  }
+            }
+            
+            .send-message{
+                width: 80%;
+                display: flex;
+                align-items: center;
+                @media screen and(max-width: 992px) {
+                    width: 70%;
+                }
+            }
+              .messages-form {
+                  width: 100%;
+                position: relative;
+                height: 36px;
+                margin: 0 auto;
+                border-radius: 4px;
+                border: 1px solid $border-color-input-1;
+                background-color: $bg-color-input-1;
+                float: left;
+              }
+              .messages-form input,
+              .content-btn {
+                border: none;
+                outline: none;
+                background: transparent;
+                .fas {
+                  color: $font-color-primary-7;
+                }
+              }
+              .messages-form input {
+                width: 100%;
+                height: 34px;
+                padding-left: 15px;
+                caret-color: $font-color-primary-7;
+                cursor: text;
+                color: $font-color-primary-7;
+              }
+              .messages-form button {
+                height: 100%;
+                width: 40px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                cursor: pointer;
+              }
+              .btn-send-content{
+                padding: 0 30px;
+        
+              }
+          }
+    }
 }

@@ -117,119 +117,113 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-10">
-                <section class="index-body">
-                  <!-- start search form -->
-                  <div class="search-block">
-                    <form class="search-form">
-                      <input type="txt" placeholder=" Search.." />
-                      <button type="submit">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                      </button>
-                    </form>
-                  </div>
-                  <!-- end search form -->
-                
-                  <!-- start addressee-block -->
-                  <div class="addressee-block">
-                    <div class="addressee-content col-md">
-                      <!-- <div class="addressee-data">
-                        <img src="../img/User_Avatar.png" alt="user_avatar" />
-                        <p>Name Surname</p>
-                      </div> -->
-                      <img src="../img/User_Avatar.png" alt="user_avatar" />
-                      <p>Name Surname</p>
-                      <div class="online-checkbox">
-                        <div class="online-checkbox-back">
-                          <div class="online-checkbox-front"></div>
+            <div class="col-xl-10 col-lg-10 col-md-9">
+                <div class="index-body">
+                    <section class="search-input ">
+                        <div class="search-block">
+                            <form class="search-form ">
+                              <input type="txt" placeholder=" Search.." />
+                              <button type="submit">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                              </button>
+                            </form>
+                          </div>
+                    </section>
+                    <section class="content-adress-block">
+                        <div class="addressee-block">
+                            <div class="addressee-content">
+                              <img src="../img/User_Avatar.png" alt="user_avatar" />
+                              <p>Name Surname</p>
+                              <div class="online-checkbox">
+                                <div class="online-checkbox-back">
+                                  <div class="online-checkbox-front"></div>
+                                </div>
+                                <p>online</p>
+                              </div>
+                        
+                              <!-- start. block deletion of messages -->
+                              <div class="delete-messages-block">
+                                <div class="delete-messages-button">
+                                  <button class="btn-delete" type="button">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                  </button>
+                                </div>
+                                <div class="check-all-messages">
+                                  <label class="container-check-all">
+                                    <input type="checkbox" />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </div>
+                              <!-- end. block deletion of messages -->
+                            </div>
+                          </div>
+                    </section>
+                    <section class="content-message-block">
+                        <div class="messages-block">
+                            <div class="content-messages">
+                              <div class="input-message">
+                                  <div class="msg">
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet.
+                                    </p>
+                                    <p class="time">11:00</p>
+                                  </div>
+                                
+                              </div>
+                              <div class="input-message">
+                                <div class="msg">
+                                    <p class="text">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, neque obcaecati quis laudantium ut accusamus quasi quia quaerat eligendi error.
+                                      </p>
+                                      <p class="time">11:00</p>
+                                </div>
+                                
+                              </div>
+                              <div class="input-message">
+                                  <div class="msg">
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, autem.
+                                      </p>
+                                      <p class="time">11:00</p>
+                                  </div>
+                                
+                              </div>
+                        
+                              <!-- start output messages -->
+                              <div class="output-message">
+                                <div class="msg">
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, autem.
+                                      </p>
+                                      <p class="time">11:00</p>
+                                  </div>
+                              </div>
+                              <!-- end output messages -->
+                            </div>
+                          </div>
+                    </section>
+                    <section class="content-input-form">
+                        <div class="input-messages">
+                            
+                            <div class="input-content-microfone">
+                                <button class="microphone content-btn" type="submit">
+                                    <i class="fas fa-microphone"></i>
+                                  </button>
+                            </div>
+                              
+                            <div class="send-message">
+                                <form class="messages-form">
+                                    <input type="txt" placeholder=" Write a message..." />
+                                    <button type="submit" class="content-btn">
+                                      <i class="fas fa-paperclip"></i>
+                                    </button>
+                                  </form>
+                            </div>
+                            <button type="submit" class="btn-type-one btn-send-content">Send</button>
                         </div>
-                        <p>online</p>
-                      </div>
-                
-                      <!-- start. block deletion of messages -->
-                      <div class="delete-messages-block col-md-8">
-                        <div class="delete-messages-button">
-                          <button class="btn-delete" type="button">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                          </button>
-                        </div>
-                        <div class="check-all-messages">
-                          <label class="container-check-all">
-                            <input type="checkbox" />
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                      </div>
-                      <!-- end. block deletion of messages -->
-                    </div>
-                  </div>
-                  <!-- end addressee-block -->
-                
-                  <!-- start messages-block -->
-                  <div class="messages-block">
-                    <div class="content-messages">
-                      <div class="input-message">
-                        <p>
-                          Hello Bill!!!
-                          <span class="time-right">11:00</span>
-                        </p>
-                      </div>
-                      <div class="input-message">
-                        <p>
-                          How are you?
-                          <span class="time-right">11:00</span>
-                        </p>
-                      </div>
-                      <div class="input-message">
-                        <p>
-                          Bill!!
-                          <span class="time-right">11:00</span>
-                        </p>
-                      </div>
-                
-                      <!-- start output messages -->
-                      <div class="output-message">
-                        <p>
-                          Hello Tommy!!!
-                          <span class="time-right">11:00</span>
-                        </p>
-                      </div>
-                      <!-- <div class="output-message">
-                        <p>
-                          Hello Tommy!!!
-                          <time>12:33</time>
-                        </p>
-                      </div>
-                      <div class="output-message">
-                        <p>
-                          Hello Tommy!!!
-                          <time>12:33</time>
-                        </p>
-                      </div> -->
-                      <!-- end output messages -->
-                    </div>
-                  </div>
-                  <!-- end messages-block -->
-                
-                  <!-- start input-messages-block -->
-                  <div class="input-messages">
-                    <div class="input-messages-content">
-                      <button class="microphone" type="button">
-                        <i class="fa fa-microphone" aria-hidden="true"></i>
-                      </button>
-                
-                      <form class="messages-form">
-                        <input type="txt" placeholder=" Write a message..." />
-                        <button type="submit">
-                          <i class="fa fa-paperclip" aria-hidden="true"></i>
-                        </button>
-                      </form>
-                
-                      </button>
-                    </div>
-                  </div>
-                  <!-- end input-messages-block -->
-                </section>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
