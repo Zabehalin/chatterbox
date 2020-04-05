@@ -1,136 +1,247 @@
-@import"mixins/font";
-@import"colors.scss";
-@import"mixins/button";
-@import"fonts.scss";
+@import "mixins/font";
+@import "colors.scss";
+@import "mixins/button";
+@import "fonts.scss";
 
-.btn-success{
-    @include btn(linear-gradient(to top, $bg-color-btn-success-1 0%, $bg-color-btn-success-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, $font-semiBold , $font-color-primary-1);
-    
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    outline: none;
-  
-    &:hover{
-        background:  linear-gradient(to top, $bg-color-btn-success-hover-1 0%, $bg-color-btn-success-hover-2 100%);        
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
-    &:active{
-        background:  linear-gradient(to top, $bg-color-btn-success-active-1 0%, $bg-color-btn-success-active-2 100%);        
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
+.btn-success {
+  @include btn(
+    linear-gradient(
+      to top,
+      $bg-color-btn-success-1 0%,
+      $bg-color-btn-success-2 100%
+    ),
+    none,
+    flex,
+    none,
+    0px,
+    30px
+  );
+  @include font(14px, $font-semiBold, $font-color-primary-1);
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  outline: none;
+
+  &:hover {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-success-hover-1 0%,
+      $bg-color-btn-success-hover-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
+  &:active {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-success-active-1 0%,
+      $bg-color-btn-success-active-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
 }
 
-.btn-type-one{
-    @include btn(linear-gradient(to top, $bg-color-btn-blue-1 0%, $bg-color-btn-blue-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, $font-semiBold, $font-color-primary-1);
-    
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    outline: none;
+.btn-type-one {
+  @include btn(
+    linear-gradient(to top, $bg-color-btn-blue-1 0%, $bg-color-btn-blue-2 100%),
+    none,
+    flex,
+    none,
+    0px,
+    30px
+  );
+  @include font(14px, $font-semiBold, $font-color-primary-1);
 
-    &:hover{
-        background:  linear-gradient(to top, $bg-color-btn-blue-hover-1 0%, $bg-color-btn-blue-hover-2 100%);      
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
-    &:active{
-        background:  linear-gradient(to top, $bg-color-btn-blue-active-1 0%, $bg-color-btn-blue-active-2 100%);        
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  outline: none;
+
+  &:hover {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-blue-hover-1 0%,
+      $bg-color-btn-blue-hover-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
+  &:active {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-blue-active-1 0%,
+      $bg-color-btn-blue-active-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
 }
 
-.btn-type-two{
-    @include btn( $bg-color-btn-gray, none, flex, none, 0px, 30px );
-    @include font(14px, $font-semiBold, $font-color-primary-1);
-    
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid;
+.btn-type-two {
+  @include btn($bg-color-btn-gray, none, flex, none, 0px, 30px);
+  @include font(14px, $font-semiBold, $font-color-primary-1);
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: $border-color-btn-gray;
+  outline: none;
+
+  &:hover {
+    background: $bg-color-btn-gray-hover;
     border-color: $border-color-btn-gray;
-    outline: none;
-  
-    &:hover{
-        background: $bg-color-btn-gray-hover;
-        border-color: $border-color-btn-gray;        
-        cursor: pointer;
-        transition: all 0.1s ease 0s;
-    }
-    &:active{
-        background:  $bg-color-btn-gray-active;              
-        cursor: pointer;
-        transition: all 0.1s ease 0s;
-    }
+    cursor: pointer;
+    transition: all 0.1s ease 0s;
+  }
+  &:active {
+    background: $bg-color-btn-gray-active;
+    cursor: pointer;
+    transition: all 0.1s ease 0s;
+  }
 }
 
-.btn-type-three{
-    @include btn(linear-gradient(to top, $bg-color-btn-violet-1 0%, $bg-color-btn-violet-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, $font-semiBold, $font-color-primary-1);
-    
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    outline: none;
-  
-    &:hover{
-        background:  linear-gradient(to top, $bg-color-btn-violet-hover-1 0%, $bg-color-btn-violet-hover-2 100%);        
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
-    &:active{
-        background:  linear-gradient(to top, $bg-color-btn-violet-active-1 0%, $bg-color-btn-violet-active-2 100%);
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
+.btn-type-three {
+  @include btn(
+    linear-gradient(
+      to top,
+      $bg-color-btn-violet-1 0%,
+      $bg-color-btn-violet-2 100%
+    ),
+    none,
+    flex,
+    none,
+    0px,
+    30px
+  );
+  @include font(14px, $font-semiBold, $font-color-primary-1);
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  outline: none;
+
+  &:hover {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-violet-hover-1 0%,
+      $bg-color-btn-violet-hover-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
+  &:active {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-violet-active-1 0%,
+      $bg-color-btn-violet-active-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
 }
 
+.btn-error {
+  @include btn(
+    linear-gradient(
+      to top,
+      $bg-color-btn-error-1 0%,
+      $bg-color-btn-error-2 100%
+    ),
+    none,
+    flex,
+    none,
+    0px,
+    30px
+  );
+  @include font(14px, $font-semiBold, $font-color-primary-1);
 
-.btn-error{
-    @include btn(linear-gradient(to top, $bg-color-btn-error-1 0%, $bg-color-btn-error-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, $font-semiBold, $font-color-primary-1);
-    
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    outline: none;
-  
-    &:hover{
-        background:  linear-gradient(to top, $bg-color-btn-error-hover-1 0%, $bg-color-btn-error-hover-2 100%);        
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
-    &:active{
-        background:  linear-gradient(to top, $bg-color-btn-error-active-1 0%, $bg-color-btn-error-active-2 100%);       
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  outline: none;
+
+  &:hover {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-error-hover-1 0%,
+      $bg-color-btn-error-hover-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
+  &:active {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-error-active-1 0%,
+      $bg-color-btn-error-active-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
 }
 
+.btn-warning {
+  @include btn(
+    linear-gradient(
+      to top,
+      $bg-color-btn-warning-1 0%,
+      $bg-color-btn-warning-2 100%
+    ),
+    none,
+    flex,
+    none,
+    0px,
+    30px
+  );
+  @include font(14px, $font-semiBold, $font-color-primary-1);
 
-.btn-warning{
-    @include btn(linear-gradient(to top, $bg-color-btn-warning-1 0%, $bg-color-btn-warning-2 100%), none, flex, none, 0px, 30px );
-    @include font(14px, $font-semiBold, $font-color-primary-1);
-    
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    outline: none;
-  
-    &:hover{
-        background:  linear-gradient(to top, $bg-color-btn-warning-hover-1 0%, $bg-color-btn-warning-hover-2 100%);       
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
-    &:active{
-        background:  linear-gradient(to top, $bg-color-btn-warning-active-1 0%, $bg-color-btn-warning-active-2 100%);        
-        cursor: pointer;
-        transition: all 0.4s ease 0s;
-    }
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  outline: none;
+
+  &:hover {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-warning-hover-1 0%,
+      $bg-color-btn-warning-hover-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
+  &:active {
+    background: linear-gradient(
+      to top,
+      $bg-color-btn-warning-active-1 0%,
+      $bg-color-btn-warning-active-2 100%
+    );
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
 }
 
+.btn-delete {
+  @include btn($bg-color-btn-delete-1, none, flex, none, 0px, 30px);
+  @include font(14px, $font-semiBold, $bg-color-btn-delete-1);
+
+  justify-content: center;
+  align-items: center;
+
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  outline: none;
+
+  &:hover {
+    background: $bg-color-btn-delete-2;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
+  &:active {
+    background: $bg-color-btn-delete-3;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
+}
