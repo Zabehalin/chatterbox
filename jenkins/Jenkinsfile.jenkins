@@ -41,7 +41,7 @@ pipeline  {
             steps {
                 echo " ============== stoping all images =================="
                 sh '''
-                docker stop $(docker ps -a -q)
+                docker stop chatterbox -f
                 '''
             }
         }
@@ -49,7 +49,7 @@ pipeline  {
             steps {
                 echo " ============== removing all docker containers =================="
                 sh '''
-                docker rm $(docker ps -a -q)
+                docker rm chatterbox -f
                 '''
             }
         }
@@ -57,7 +57,7 @@ pipeline  {
             steps {
                 echo " ============== starting chatterbox =================="
                 sh '''
-                docker run -d --restart=always -p 3000:3000 macnaer/chatterbox
+                docker run -d --restart=always --name chatterbox -p 3000:3000 macnaer/chatterbox
                 '''
             }
         }
