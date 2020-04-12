@@ -41,15 +41,15 @@ pipeline  {
             steps {
                 echo " ============== stoping all images =================="
                 sh '''
-                docker stop chatterbox -f
+                docker stop chatterbox
                 '''
             }
-        }
+        } 
         stage("docker remove") {
             steps {
                 echo " ============== removing all docker containers =================="
                 sh '''
-                docker rm chatterbox -f
+                docker rm chatterbox
                 '''
             }
         }
