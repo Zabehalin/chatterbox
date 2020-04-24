@@ -8,4 +8,4 @@ WORKDIR /var/www
 
 RUN npm install
 
-ENTRYPOINT [ "node server" ]
+ENTRYPOINT [ "node", "server" ]
