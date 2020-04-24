@@ -9,8 +9,8 @@ container.resolve(function (users, _) {
   function SetupExpress() {
     const app = express();
     const server = http.createServer(app);
-    server.listen(process.env.PORT || 3000, function () {
-      console.log("Server running on port 3000");
+    server.listen(process.env.PORT || 5000, function () {
+      console.log("Server running on port 5000");
     });
 
     ConfigureExpress(app);
