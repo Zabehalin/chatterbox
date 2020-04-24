@@ -15,7 +15,7 @@ pipeline  {
             steps {
                 echo 'Creating docker image ...'
                 dir('.'){
-                    sh "docker build -t macnaer/chatterboxServer . "
+                    sh "docker build -t macnaer/chatterboxserver . "
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline  {
             steps {
                 echo " ============== pushing image =================="
                 sh '''
-                docker push macnaer/chatterboxServer:latest
+                docker push macnaer/chatterboxserver:latest
                 '''
             }
         }
@@ -41,7 +41,7 @@ pipeline  {
             steps {
                 echo " ============== stoping all images =================="
                 sh '''
-                docker stop chatterboxServer
+                docker stop chatterboxserver
                 '''
             }
         } 
@@ -49,15 +49,15 @@ pipeline  {
             steps {
                 echo " ============== removing all docker containers =================="
                 sh '''
-                docker rm chatterboxServer
+                docker rm chatterboxserver
                 '''
             }
         }
         stage("docker run") {
             steps {
-                echo " ============== starting chatterbox =================="
+                echo " ============== starting chatterbox server =================="
                 sh '''
-                docker run -d --restart=always --name chatterboxServer -p 5000:3000 macnaer/chatterbox
+                docker run -d --restart=always --name chatterboxserver -p 5000:3000 macnaer/chatterbox
                 '''
             }
         }
