@@ -3,8 +3,26 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const http = require("http");
 const container = require("./container");
+const cookieParser = require("cookie-parser");
+const validator = require("express-validator");
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
+const mongoose = require("mongoose");
+const flash = require("connect-flash");
+const passport = require("passport");
 
 container.resolve(function (users, _) {
+  mongoConnectionString =
+    "mongodb+srv://chatteradmin:chatteradmin@cluster0-ieu57.mongodb.net";
+  mongoose.Promise = global.Promise;
+  mongoose
+    .connect(mongoConnectionString, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
+    .then((msg) => console.log("Connected to atlas => "))
+    .catch((err) => console.log(err));
+
   const app = SetupExpress();
   function SetupExpress() {
     const app = express();
@@ -22,8 +40,25 @@ container.resolve(function (users, _) {
 
   function ConfigureExpress(app) {
     app.use(express.static("public"));
+    app.use(cookieParser());
     app.set("view engine", "ejs");
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
+
+    app.use(validator());
+
+    app.use(
+      session({
+        secret: "addyourownsecretkey",
+        resave: false,
+        saveUninitialized: false,
+        store: new MongoStore({ mongooseConnection: mongoose.connection }),
+      })
+    );
+
+    app.use(flash());
+
+    app.use(passport.initialize());
+    app.use(passport.session());
   }
 });

@@ -6,7 +6,6 @@ module.exports = function (_) {
       router.get("/", this.indexPage);
       router.get("/register", this.registerPage);
       router.get("/login", this.loginPage);
-      router.get("/forgot", this.forgotPage);
     },
 
     indexPage: function (req, res) {
@@ -17,9 +16,6 @@ module.exports = function (_) {
     },
     loginPage: function (req, res) {
       return res.render("login");
-    },
-    forgotPage: function (req, res) {
-      return res.render("forgot");
     },
   };
 };
