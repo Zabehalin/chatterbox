@@ -9,7 +9,7 @@ module.exports = function (_) {
     },
 
     indexPage: function (req, res) {
-      return res.render("index", { title: "Test | pass" });
+      return res.render("index", { title: "Home page" });
     },
     registerPage: function (req, res) {
       return res.render("register");
