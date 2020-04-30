@@ -4,9 +4,12 @@ module.exports = function (_, passport, User) {
   return {
     SetRouting: function (router) {
       router.get("/", this.indexPage);
+
       router.get("/register", this.registerPage);
       router.post("/register", this.postRegister);
+
       router.get("/login", this.loginPage);
+      router.post("/login", this.postLogin);
     },
 
     indexPage: function (req, res) {
@@ -21,6 +24,11 @@ module.exports = function (_, passport, User) {
     postRegister: passport.authenticate("local.signup", {
       successRedirect: "/",
       failureRedirect: "/register",
+      failureFlash: true,
+    }),
+    postLogin: passport.authenticate("local.login", {
+      successRedirect: "/",
+      failureRedirect: "/login",
       failureFlash: true,
     }),
   };
