@@ -67,7 +67,6 @@ passport.use(
         if (err) {
           return done(err);
         }
-
         const messages = [];
         if (!user || !user.validUserPassword(password)) {
           messages.push("Login or password incorrect");
