@@ -1,4 +1,35 @@
-<%- include("partials/head.ejs") %>
-<%- include("partials/header-register.ejs") %>
-<%- include("partials/login-body.ejs") %>
+<%- include("partials/head.ejs") %> <%-
+include("partials/header-register.ejs")%>
+<main>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 register-form"
+        >
+          <form action="" class="form-group">
+            <div class="input-container">
+              <i class="far fa-envelope icon"></i>
+              <input type="email" class="inp" placeholder="Email" />
+            </div>
+            <div class="input-container">
+              <i class="fas fa-lock icon"></i>
+              <input type="password" class="inp" placeholder="Password" />
+            </div>
+            <button type="submit" class="btn-type-two btn">Login</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row login-links-block">
+        <div class="login-links col-md-12">
+          <a href="../forgot.html">Forgot password?</a>
+        </div>
+        <div class="login-links col-md-12">
+          <a href="../register.html">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 <%- include("partials/footer.ejs") %>
