@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function (_, passport) {
+module.exports = function (_, passport, User) {
   return {
     SetRouting: function (router) {
       router.get("/", this.indexPage);
