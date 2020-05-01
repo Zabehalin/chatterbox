@@ -10,6 +10,9 @@ module.exports = function (_, passport, User) {
 
       router.get("/login", this.loginPage);
       router.post("/login", this.postLogin);
+
+      router.get("/forgot", this.forgotPage);
+      router.post("/forgot", this.forgotPage);
     },
 
     indexPage: function (req, res) {
@@ -21,6 +24,10 @@ module.exports = function (_, passport, User) {
     loginPage: function (req, res) {
       return res.render("login");
     },
+    forgotPage: function (req, res) {
+      return res.render("forgot");
+    },
+
     postRegister: passport.authenticate("local.signup", {
       successRedirect: "/",
       failureRedirect: "/register",
