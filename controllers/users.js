@@ -5,10 +5,10 @@ module.exports = function (_, passport, User) {
     SetRouting: function (router) {
       router.get("/", this.loginPage);
       router.get("/home", this.indexPage);
-
       router.get("/register", this.registerPage);
+
       router.post("/register", User.RegisterValidation, this.postRegister);
-      router.post("/", this.postLogin);
+      router.post("/", User.LoginValidation, this.postLogin);
     },
 
     indexPage: function (req, res) {
@@ -39,7 +39,7 @@ module.exports = function (_, passport, User) {
     }),
     postLogin: passport.authenticate("local.login", {
       successRedirect: "/home",
-      failureRedirect: "/login",
+      failureRedirect: "/",
       failureFlash: true,
     }),
   };
