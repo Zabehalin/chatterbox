@@ -6,9 +6,11 @@ module.exports = function (_, passport, User) {
       router.get("/", this.loginPage);
       router.get("/home", this.indexPage);
       router.get("/register", this.registerPage);
-
+      
       router.post("/register", User.RegisterValidation, this.postRegister);
       router.post("/", User.LoginValidation, this.postLogin);
+      router.get("/login", this.loginPage);
+      router.post("/login", this.postLogin);
     },
 
     indexPage: function (req, res) {
@@ -32,6 +34,10 @@ module.exports = function (_, passport, User) {
         hasErrors: errors.length > 0,
       });
     },
+    forgotPage: function (req, res) {
+      return res.render("forgot");
+    },
+
     postRegister: passport.authenticate("local.signup", {
       successRedirect: "/home",
       failureRedirect: "/register",
