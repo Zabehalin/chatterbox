@@ -1,1 +1,5 @@
-console.log("Works");
+$(document).ready(function(){
+    $(".close").click(function(){
+        $("#myAlert").alert("close");
+    });
+});
