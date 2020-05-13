@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 const flash = require("connect-flash");
 const passport = require("passport");
 
-container.resolve(function (users, _) {
+container.resolve(function (users, _, admin) {
   mongoConnectionString =
     "mongodb+srv://chatteradmin:chatteradmin@cluster0-ieu57.mongodb.net";
   mongoose.Promise = global.Promise;
@@ -35,6 +35,7 @@ container.resolve(function (users, _) {
 
     const router = require("express-promise-router")();
     users.SetRouting(router);
+    admin.SetRouting(router);
     app.use(router);
   }
 
@@ -46,7 +47,7 @@ container.resolve(function (users, _) {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
 
-    app.use(validator());
+    // app.use(validator());
 
     app.use(
       session({

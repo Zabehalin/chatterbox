@@ -7,6 +7,8 @@ const Dependecies = [
   ["_", "lodash"],
   ["mongoose", "mongoose"],
   ["passport", "passport"],
+  ["Group", "./models/group"],
+  ["formidable", "formidable"],
 ];
 
 Dependecies.forEach(function (val) {
