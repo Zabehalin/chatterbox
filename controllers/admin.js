@@ -1,3 +1,4 @@
+const path = require("path");
 module.exports = function (formidable, Group) {
   return {
     SetRouting: function (router) {
@@ -23,6 +24,8 @@ module.exports = function (formidable, Group) {
 
     uploadFile: function (req, res) {
       const form = new formidable.IncomingForm();
+      form.uploadDir = path.join(__dirname, "../public/uploads");
+      console.log("form", form);
 
       form.on("file", (field, file) => {});
 
