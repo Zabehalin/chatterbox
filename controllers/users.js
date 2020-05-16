@@ -139,13 +139,13 @@ module.exports = function (_, passport, validator) {
 
     postRegister: passport.authenticate("local.signup", {
       successRedirect: "/home",
-      failureRedirect: "/register",
+      failureRedirect: "",
       failureFlash: true,
     }),
 
     postLogin: passport.authenticate("local.login", {
       successRedirect: "/home",
-      failureRedirect: "/",
+      failureRedirect: "",
       failureFlash: true,
     }),
   };

@@ -12,6 +12,8 @@ const flash = require("connect-flash");
 const passport = require("passport");
 
 container.resolve(function (users, _, admin) {
+  mongoose.set("useFindAndModify", false);
+  mongoose.set("useCreateIndex", true);
   mongoConnectionString =
     "mongodb+srv://chatteradmin:chatteradmin@cluster0-ieu57.mongodb.net";
   mongoose.Promise = global.Promise;
