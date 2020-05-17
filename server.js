@@ -62,7 +62,6 @@ container.resolve(function (users, _, admin, homePage) {
     );
 
     app.use(flash());
-
     app.use(passport.initialize());
     app.use(passport.session());
 
