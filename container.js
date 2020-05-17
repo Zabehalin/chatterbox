@@ -9,6 +9,7 @@ const Dependecies = [
   ["passport", "passport"],
   ["Group", "./models/group"],
   ["formidable", "formidable"],
+  ["async", "async"],
   ["validator", "express-validator"],
 ];
 

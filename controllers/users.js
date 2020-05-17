@@ -4,7 +4,6 @@ module.exports = function (_, passport, validator) {
   return {
     SetRouting: function (router) {
       router.get("/", this.loginPage);
-      router.get("/home", this.indexPage);
       router.get("/register", this.registerPage);
 
       router.post(
@@ -112,11 +111,6 @@ module.exports = function (_, passport, validator) {
       return next();
     },
 
-    indexPage: function (req, res) {
-      return res.render("index", {
-        title: "Chatterbox | Main",
-      });
-    },
     registerPage: function (req, res) {
       const errors = req.flash("error");
       return res.render("register", {
