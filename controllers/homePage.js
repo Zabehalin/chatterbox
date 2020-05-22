@@ -11,10 +11,20 @@ module.exports = function (async, Group, _) {
               callback(err, result);
             });
           },
+          function(callback){
+            Group.aggregate([{
+                $group: {
+                    _id: "$description"
+                }
+            }], (err, newResult) => {
+               callback(err, newResult) ;
+            });
+        },
         ],
-        (err, result) => {
-          const res1 = result[0];
-          console.log(res1);
+        (err, results) => {
+          const res1 = results[0];
+          const res2 = results[1];
+          console.log(res2);
           const chunkSize = 3;
 
           const dataChunk = [];
