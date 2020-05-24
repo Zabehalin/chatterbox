@@ -12,7 +12,6 @@ module.exports = function (formidable, Group) {
     adminPage: function (req, res) {
       res.render("admin/dashboard");
     },
-
     adminPostPage: function (req, res) {
       const newGroup = new Group();
       newGroup.name = req.body.group;
