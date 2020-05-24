@@ -116,8 +116,28 @@
               <div class="messages-block">
                 <div class="content-messages">
                   <div class="col-md-9">
+                    <div class="card">
+                      <form action="/results" method="post">
+                          <div class="content">
+                              <p class="filter">
+                                  FILTER
+                              </p>
+                              <hr/>
+                              <select class="form-control" name="country" id="country" >
+                                  <option value="">Filter By 
+                                    Group
+                                  </option>
+                                  <% _.forEach(descriptions, function(value) { %>
+                                      <option value="<%= value._id %>"><%= value._id %></option>
+                                  <% }) %>
+                              </select>
+                              <div class="clearfix"></div>
+                              <button class="btn add-apply">Apply</button>
+                          </div>
+                      </form>
+                  </div>
                     <div>
-                       <% _.forEach(chunks, function(val) { %>
+                       <% _.forEach(chunks, function(val) { console.log("Chunks ", chunks) %>
                         <div class="category-list">
                             <div class="row">
                                <% _.forEach(val, function(val2) { %>
@@ -125,7 +145,7 @@
                                     <div class="item col-md-4">
                 <a style="text-decoration:none" href="/group/<%= val2.name.replace(/ /g, "-") %>">
                                         <div class="thumbnail">
-                                           <img src="https://localhost:3333/<%= val2.image %>" alt="">
+                                           <img src="http://localhost:3333/<%= val2.image %>" alt="">
                                             <div class="caption">
                                                 <h4>
                                                     <%= val2.name %> (<%= val2.members.length %>)
@@ -134,13 +154,13 @@
                                                 <div class="row">
                                                     <div class="col-xs-12 col-md-6">
                                                         <p>
-                                                            <%= val2.country %>
+                                                            <%= val2.description %>
                                                         </p>
                                                     </div>
                                                     
                                                     <div class="col-xs-12 col-md-6">
                                                         <input type="hidden" name="id" id="id" value="<%= val2._id %>">
-                                                        <input type="hidden" name="clubName" id="club_Name" value="<%= val2.name %>">
+                                                        <input type="hidden" name="groupName" id="group_Name" value="<%= val2.name %>">
                                                         <button class="btn add-fav">
                                                             Add To Favorite
                                                         </button>

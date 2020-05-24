@@ -11,15 +11,20 @@ module.exports = function (async, Group, _) {
               callback(err, result);
             });
           },
-          function(callback){
-            Group.aggregate([{
-                $group: {
-                    _id: "$description"
-                }
-            }], (err, newResult) => {
-               callback(err, newResult) ;
-            });
-        },
+          function (callback) {
+            Group.aggregate(
+              [
+                {
+                  $group: {
+                    _id: "$description",
+                  },
+                },
+              ],
+              (err, newResult) => {
+                callback(err, newResult);
+              }
+            );
+          },
         ],
         (err, results) => {
           const res1 = results[0];
@@ -32,13 +37,13 @@ module.exports = function (async, Group, _) {
             dataChunk.push(res1.slice(i, i + chunkSize));
           }
 
-          // const descriptionSort = _.sortBy(res2, "_id");
+          const descriptionSort = _.sortBy(res2, "_id");
 
           res.render("index", {
             title: "Chatterbox - Home",
             // user: req.user,
             chunks: dataChunk,
-            // description: descriptionSort,
+            descriptions: descriptionSort,
             // data: res3,
             // chat: res4,
           });

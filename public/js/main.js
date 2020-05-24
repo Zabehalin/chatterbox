@@ -1,39 +1,39 @@
-$(document).ready(function () {
-  $(".close").click(function () {
-    $("#myAlert").alert("close");
-  });
-});
+// $(document).ready(function () {
+//   $(".close").click(function () {
+//     $("#myAlert").alert("close");
+//   });
+// });
 
-$(function () {
-  window.setInterval(function () {
-    $("#my-alert").alert("close");
-  }, 2000);
-});
+// $(function () {
+//   window.setInterval(function () {
+//     $("#my-alert").alert("close");
+//   }, 2000);
+// });
 
-/// Dashboard upload file
-$(document).ready(function () {
-  $(".upload-btn").on("click", function () {
-    $("#upload-input").click();
-  });
+// /// Dashboard upload file
+// $(document).ready(function () {
+//   $(".upload-btn").on("click", function () {
+//     $("#upload-input").click();
+//   });
 
-  $("#upload-input").on("change", function () {
-    var uploadInput = $("#upload-input");
+//   $("#upload-input").on("change", function () {
+//     var uploadInput = $("#upload-input");
 
-    if (uploadInput.val() != "") {
-      var formData = new FormData();
+//     if (uploadInput.val() != "") {
+//       var formData = new FormData();
 
-      formData.append("upload", uploadInput[0].files[0]);
+//       formData.append("upload", uploadInput[0].files[0]);
 
-      $.ajax({
-        url: "/uploadFile",
-        type: "POST",
-        data: formData,
-        processData: false,
-        contentType: false,
-        success: function () {
-          uploadInput.val("");
-        },
-      });
-    }
-  });
-});
+//       $.ajax({
+//         url: "/dashboard",
+//         type: "POST",
+//         data: formData,
+//         processData: false,
+//         contentType: false,
+//         success: function () {
+//           uploadInput.val("");
+//         },
+//       });
+//     }
+//   });
+// });

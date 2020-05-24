@@ -99,7 +99,6 @@ module.exports = function (_, passport, validator) {
       errors.forEach((error) => {
         messages.push(error.msg);
       });
-      // req.flash('error', messages);
       if (messages.length > 0) {
         req.flash("error", messages);
         if (req.url === "/register") {
