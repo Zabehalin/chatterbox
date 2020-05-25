@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 const flash = require("connect-flash");
 const passport = require("passport");
 
-container.resolve(function (users, _, admin) {
+container.resolve(function (users, _, admin, homePage) {
   mongoose.set("useFindAndModify", false);
   mongoose.set("useCreateIndex", true);
   mongoConnectionString =
@@ -38,6 +38,7 @@ container.resolve(function (users, _, admin) {
     const router = require("express-promise-router")();
     users.SetRouting(router);
     admin.SetRouting(router);
+    homePage.SetRouting(router);
     app.use(router);
   }
 
@@ -61,7 +62,6 @@ container.resolve(function (users, _, admin) {
     );
 
     app.use(flash());
-
     app.use(passport.initialize());
     app.use(passport.session());
 

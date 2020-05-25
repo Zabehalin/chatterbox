@@ -1,5 +1,6 @@
 const path = require("path");
 module.exports = function (formidable, Group) {
+  let imgPath = "";
   return {
     SetRouting: function (router) {
       router.get("/dashboard", this.adminPage);
@@ -11,12 +12,11 @@ module.exports = function (formidable, Group) {
     adminPage: function (req, res) {
       res.render("admin/dashboard");
     },
-
     adminPostPage: function (req, res) {
       const newGroup = new Group();
       newGroup.name = req.body.group;
       newGroup.description = req.body.description;
-      newGroup.image = req.body.upload;
+      newGroup.image = imgPath;
       newGroup.save((err) => {
         res.render("admin/dashboard");
       });
@@ -25,14 +25,14 @@ module.exports = function (formidable, Group) {
     uploadFile: function (req, res) {
       const form = new formidable.IncomingForm();
       form.uploadDir = path.join(__dirname, "../public/uploads");
-      console.log("form", form);
-
-      form.on("file", (field, file) => {});
-
+      form.keepExtensions = true;
+      form.on("file", (field, file) => {
+        imgPath = file.path.split("\\");
+        imgLenght = imgPath.length;
+        imgPath = imgPath[imgLenght - 1];
+      });
       form.on("error", (err) => {});
-
       form.on("end", () => {});
-
       form.parse(req);
     },
   };
