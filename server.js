@@ -15,7 +15,7 @@ container.resolve(function (users, _, admin, homePage) {
   mongoose.set("useFindAndModify", false);
   mongoose.set("useCreateIndex", true);
   mongoConnectionString =
-    "mongodb+srv://chatteradmin:chatteradmin@cluster0-ieu57.mongodb.net";
+    "mongodb://os.environ['DB_USER']:os.environ['DB_PASSWORD']@os.environ['DB_HOST']";
   mongoose.Promise = global.Promise;
   mongoose
     .connect(mongoConnectionString, {
